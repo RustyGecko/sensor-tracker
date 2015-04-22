@@ -1,0 +1,12 @@
+language: rust
+
+before_script:
+  - sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded -y
+  - sudo apt-get update -q
+  - sudo apt-get install gcc-arm-none-eabi
+
+before_install:
+  - git submodule update --init --recursive
+
+script:
+  - make
