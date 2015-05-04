@@ -1,11 +1,16 @@
 #![no_std]
-#![no_main]
-#![feature(lang_items, start, core, no_std)]
-#![feature(collections, alloc)]
+#![feature(core, no_std)]
+#![feature(collections, alloc, slice_patterns)]
 
 #[macro_use]
 extern crate core;
 extern crate emlib;
+extern crate emdrv;
+extern crate cmsis;
+extern crate modules;
+extern crate kits;
+extern crate sensors;
+
 extern crate libc;
 extern crate alloc;
 
@@ -13,19 +18,15 @@ extern crate alloc;
 extern crate collections;
 
 use core::prelude::*;
-use core::default::Default;
 use core::fmt::Debug;
 
-use collections::vec::Vec;
-
 use emlib::{adc, chip, cmu, emu, i2c, rtc};
-use emlib::modules::Usart;
-use emlib::cmsis::nvic;
-use emlib::utils::cmdparse::{get_command, Cmd};
-use emlib::stk::io::{PB0, PB1};
-use emlib::stk::bsp;
+use modules::Usart;
+use cmsis::nvic;
+use cmdparse::{get_command, Cmd};
+use kits::stk::io::{PB0, PB1};
+use kits::stk::bsp;
 
-use ram_store as store;
 use fixed_size_vector::FixedSizeVector;
 use sensor::Sensor;
 
@@ -39,18 +40,18 @@ mod buffer;
 mod circular_buffer;
 mod fixed_size_vector;
 mod sensor;
+mod cmdparse;
 
 enum State {
     Connected,
     Unconnected
 }
 
-const INTERVAL: u32 = 50; // Time in ms between each sample
+const INTERVAL: u32 = 1000; // Time in ms between each sample
 
 static mut MODE: State = State::Unconnected;
 
-#[no_mangle]
-pub extern fn main() {
+fn main() {
 
     chip::init();
     bsp::trace_swo_setup();

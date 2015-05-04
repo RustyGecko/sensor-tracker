@@ -1,4 +1,4 @@
-#![allow(unused_attributes)]
+#![allow(unused_attributes, dead_code)]
 #![feature(collections, core)]
 
 use core::clone::Clone;

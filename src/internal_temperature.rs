@@ -1,7 +1,5 @@
-use emlib;
-use emlib::{cmu, adc};
+use emlib::adc;
 use core::prelude::*;
-use core::default::Default;
 
 use sensor::Sensor;
 

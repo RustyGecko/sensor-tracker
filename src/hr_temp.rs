@@ -1,14 +1,8 @@
-use core::default::Default;
-use core::intrinsics::transmute;
 use core::prelude::*;
 
-use emlib::emdrv;
-use emlib::sensors::si7013;
+use emdrv;
+use sensors::si7013;
 use emlib::i2c;
-
-use circular_buffer::CircularBuffer4;
-use buffer::FixedSizeBuffer128;
-use ram_store as store;
 
 use sensor::Sensor;
 
