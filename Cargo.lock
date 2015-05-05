@@ -57,7 +57,7 @@ dependencies = [
 [[package]]
 name = "emdrv"
 version = "0.0.1"
-source = "git+https://github.com/RustyGecko/emdrv.git#1b85dbde52958ab6ff89508df4c27fd64f52f508"
+source = "git+https://github.com/RustyGecko/emdrv.git#276cdfb5823e2fabecee8d246982956389192bff"
 dependencies = [
  "cmsis 0.1.0 (git+https://github.com/RustyGecko/cmsis.git)",
  "core 0.0.1 (git+https://github.com/RustyGecko/rust-core.git)",
@@ -69,7 +69,7 @@ dependencies = [
 [[package]]
 name = "emlib"
 version = "0.0.1"
-source = "git+https://github.com/RustyGecko/emlib.git#f20d76bf4c79afe879d7043cc54f2e5bf889e097"
+source = "git+https://github.com/RustyGecko/emlib.git#998a788b790e75f13828028fd61bfe1acb0dfb29"
 dependencies = [
  "alloc 0.0.1 (git+https://github.com/RustyGecko/rust-alloc.git)",
  "cmsis 0.1.0 (git+https://github.com/RustyGecko/cmsis.git)",
@@ -89,11 +89,13 @@ source = "git+https://github.com/sondrele/gcc-rs.git#4507766dbe9e40224121058bddc
 [[package]]
 name = "kits"
 version = "0.1.0"
-source = "git+https://github.com/RustyGecko/kits.git#fbe0b49cffd8ec033e2ad3f0f0d91222b8d186ad"
+source = "git+https://github.com/RustyGecko/kits.git#dc125f71050a80adf09541c7070672ab22f25c1b"
 dependencies = [
  "core 0.0.1 (git+https://github.com/RustyGecko/rust-core.git)",
  "emlib 0.0.1 (git+https://github.com/RustyGecko/emlib.git)",
+ "gcc 0.3.3 (git+https://github.com/sondrele/gcc-rs.git)",
  "modules 0.1.0 (git+https://github.com/RustyGecko/modules.git)",
+ "submodules 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -107,7 +109,7 @@ dependencies = [
 [[package]]
 name = "modules"
 version = "0.1.0"
-source = "git+https://github.com/RustyGecko/modules.git#881f9f40154a445f531687ff9c7aae6bb4ad205b"
+source = "git+https://github.com/RustyGecko/modules.git#96cff374a5bb85e494bfcb38f0928d920f402974"
 dependencies = [
  "collections 0.0.1 (git+https://github.com/RustyGecko/rust-collections.git)",
  "core 0.0.1 (git+https://github.com/RustyGecko/rust-core.git)",
@@ -141,7 +143,7 @@ dependencies = [
 [[package]]
 name = "sensors"
 version = "0.1.0"
-source = "git+https://github.com/RustyGecko/sensors.git#fda31dfcf9af27130b23c19c54d32834bf9e16b2"
+source = "git+https://github.com/RustyGecko/sensors.git#5590c83334f0f47c190a6bc194c4cd2806f5fa29"
 dependencies = [
  "collections 0.0.1 (git+https://github.com/RustyGecko/rust-collections.git)",
  "core 0.0.1 (git+https://github.com/RustyGecko/rust-core.git)",
