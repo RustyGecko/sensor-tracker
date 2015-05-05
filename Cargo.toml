@@ -9,10 +9,10 @@ features = ["stk3700"]
 
 [target.thumbv7m-none-eabi.dependencies.modules]
 git = "https://github.com/RustyGecko/modules.git"
+features = ["stk3700"]
 
 [target.thumbv7m-none-eabi.dependencies.emlib]
 git = "https://github.com/RustyGecko/emlib.git"
-features = ["stk3700"]
 
 [target.thumbv7m-none-eabi.dependencies.emdrv]
 git = "https://github.com/RustyGecko/emdrv.git"
