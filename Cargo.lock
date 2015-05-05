@@ -69,7 +69,7 @@ dependencies = [
 [[package]]
 name = "emlib"
 version = "0.0.1"
-source = "git+https://github.com/RustyGecko/emlib.git#998a788b790e75f13828028fd61bfe1acb0dfb29"
+source = "git+https://github.com/RustyGecko/emlib.git#0e05aa9bb2f25c12ae6e810a1c121386077f6481"
 dependencies = [
  "alloc 0.0.1 (git+https://github.com/RustyGecko/rust-alloc.git)",
  "cmsis 0.1.0 (git+https://github.com/RustyGecko/cmsis.git)",
@@ -78,6 +78,7 @@ dependencies = [
  "gcc 0.3.3 (git+https://github.com/sondrele/gcc-rs.git)",
  "libc 0.0.1 (git+https://github.com/RustyGecko/rust-libc.git)",
  "rlibc 0.1.3 (git+https://github.com/RustyGecko/rlibc.git)",
+ "startup 0.1.0 (git+https://github.com/RustyGecko/startup.git)",
  "submodules 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -151,6 +152,19 @@ dependencies = [
  "emlib 0.0.1 (git+https://github.com/RustyGecko/emlib.git)",
  "gcc 0.3.3 (git+https://github.com/sondrele/gcc-rs.git)",
  "libc 0.0.1 (git+https://github.com/RustyGecko/rust-libc.git)",
+ "submodules 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "startup"
+version = "0.1.0"
+source = "git+https://github.com/RustyGecko/startup.git#a80c2f5c563a7737c8c43f34ceeb9bd0c541496c"
+dependencies = [
+ "alloc 0.0.1 (git+https://github.com/RustyGecko/rust-alloc.git)",
+ "core 0.0.1 (git+https://github.com/RustyGecko/rust-core.git)",
+ "gcc 0.3.3 (git+https://github.com/sondrele/gcc-rs.git)",
+ "libc 0.0.1 (git+https://github.com/RustyGecko/rust-libc.git)",
+ "rlibc 0.1.3 (git+https://github.com/RustyGecko/rlibc.git)",
  "submodules 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
