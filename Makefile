@@ -12,7 +12,7 @@ all: debug
 debug: $(DEBUG_DIR)/$(OUT) $(DEBUG_DIR)/$(OUT).hex $(DEBUG_DIR)/$(OUT).bin $(DEBUG_DIR)/$(OUT).axf
 
 $(DEBUG_DIR)/$(OUT): src/main.rs
-	cargo linkargs $(LINKARGS) --target thumbv7m-none-eabi --verbose
+	cargo rustc --target thumbv7m-none-eabi --verbose -- -C link-args=$(LINKARGS)
 
 %.hex: %
 	$(OBJCOPY) -O ihex $< $@
