@@ -67,7 +67,7 @@ fn is_printable(ch: u8) -> bool{
 
 fn parse(line: String) -> Cmd {
 
-    let tokens: Vec<&str> = line.as_ref().split(' ').collect();
+    let tokens: Vec<&str> = line.split(' ').collect();
 
     match tokens.as_ref() {
         ["w", num] => match FromStr::from_str(num) {
